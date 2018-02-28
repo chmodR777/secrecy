@@ -352,6 +352,51 @@ boolean b_flag = false;
 	<%
 		b_flag = false;
 		for(int i=0; i < list.size(); i++){
+			if("40".equals(list.get(i))){
+				b_flag = true;
+			}
+		}
+	%>		
+	<input type="checkbox" name="menuid" id="m40" value="40" onclick="chkAllSub('m40')" <%if(b_flag){ %>checked<%} %>></td>
+	<td class="input" width="30%">学习交流</td>
+    <td class="input" width="50%">学习交流(一级菜单)</td>
+</tr>
+<tr>
+	<td class="item" width="20%" nowrap>
+	<%
+		b_flag = false;
+		for(int i=0; i < list.size(); i++){
+			if("41".equals(list.get(i))){
+				b_flag = true;
+			}
+		}
+	%>	
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="menuid" id="m40_1" value="41" onclick="chkItsParent('m40',this)" <%if(b_flag){ %>checked<%} %>></td>
+	<td class="input" width="30%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;在线投稿</td>
+    <td class="input" width="50%">在线投稿(二级菜单)</td>
+</tr>
+<tr>
+	<td class="item" width="20%" nowrap>
+	<%
+		b_flag = false;
+		for(int i=0; i < list.size(); i++){
+			if("42".equals(list.get(i))){
+				b_flag = true;
+			}
+		}
+	%>		
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="menuid" id="m40_2" value="42" onclick="chkItsParent('m40',this)" <%if(b_flag){ %>checked<%} %>></td>
+	<td class="input" width="30%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;经验分享</td>
+    <td class="input" width="50%">经验分享(二级菜单)</td>
+</tr>
+
+
+
+<tr>
+	<td class="item" width="20%" nowrap>
+	<%
+		b_flag = false;
+		for(int i=0; i < list.size(); i++){
 			if("10".equals(list.get(i))){
 				b_flag = true;
 			}
@@ -478,7 +523,7 @@ boolean b_flag = false;
 	<%
 		b_flag = false;
 		for(int i=0; i < list.size(); i++){
-			if("120".equals(list.get(i))){
+ 			if("20".equals(list.get(i))){
 				b_flag = true;
 			}
 		}
@@ -557,6 +602,10 @@ function chkAllSub(id){
 			document.getElementById("m29_9").checked = true;
 			document.getElementById("m29_10").checked = true;
 		}
+		if("m40" == id){
+			document.getElementById("m40_1").checked = true;
+			document.getElementById("m40_2").checked = true;
+		}
 	}else{
 		if("m5" == id){
 			document.getElementById("m5_1").checked = false;
@@ -598,6 +647,10 @@ function chkAllSub(id){
 			document.getElementById("m29_9").checked = false;
 			document.getElementById("m29_10").checked = false;
 		}
+		if("m40" == id){
+			document.getElementById("m40_1").checked = false;
+			document.getElementById("m40_2").checked = false;
+		}
 	}
 }
 //选择他的父菜单
@@ -620,6 +673,9 @@ function chkItsParent(parent,node){
 		}
 		if("m29" == parent){
 			document.getElementById("m29").checked = true;
+		}
+		if("m40" == parent){
+			document.getElementById("m40").checked = true;
 		}
 	}else{
 		if("m5" == parent){
@@ -672,6 +728,12 @@ function chkItsParent(parent,node){
 			   document.getElementById("m29_9").checked==false &&
 			   document.getElementById("m29_10").checked==false){
 			   document.getElementById("m29").checked = false;
+			}
+		}
+		if("m40" == parent){
+			if(document.getElementById("m40_1").checked==false &&
+			   document.getElementById("m40_2").checked==false){
+			   document.getElementById("m40").checked = false;
 			}
 		}
 	}

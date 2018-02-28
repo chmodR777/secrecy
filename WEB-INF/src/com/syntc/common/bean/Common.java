@@ -1763,4 +1763,22 @@ public class Common {
 		
 		return getSortOptionList(sb_SQL.toString(), p_Type);
 	}
+	
+	/**
+	 * 获取文章状态下拉列表
+	 * 
+	 * @return String
+	 * @author ld
+	 */
+	public String getArticleStatusOptionList(String p_Status) {
+		StringBuffer sb_SQL = new StringBuffer();
+		sb_SQL.append("SELECT t_optionitem.C_ID, ");
+		sb_SQL.append("t_optionitem.C_NAME ");
+		sb_SQL.append("FROM t_optionitem ");
+		sb_SQL.append("WHERE t_optionitem.C_STATUS = '1' ");
+		sb_SQL.append("AND t_optionitem.C_TYPE = 'articleStatus' ");
+		sb_SQL.append("ORDER BY t_optionitem.C_ORDER ASC ");
+		
+		return getSortOptionList(sb_SQL.toString(), p_Status);
+	}
 }

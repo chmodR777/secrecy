@@ -279,6 +279,40 @@ body{
   </tr> 
 <%
 	}
+	str_display = "none";
+	str_imgname = "c";
+	str_sh = StringUtil.convertNull(request.getParameter("sh_xsjl"),"close");
+	if(str_sh.equals("open")){
+		str_display = "";
+		str_imgname = "o";
+	}
+	if("TRUE".equals(map.get("40"))){
+%>
+  <tr onClick="oc('xsjl');">
+    <td class="m1l"><img src="images/menus/m4.jpg"></td>
+    <td class="m1">学习交流</td>
+    <td class="m1"><img src="images/menus/<%=str_imgname%>.gif" id="oc_xsjl"></td>
+  </tr>
+<%
+	}
+	if("TRUE".equals(map.get("41"))){
+%>
+  <tr id="sub_xsjl" style="display:<%=str_display%>;" onClick="gourl('ArticleStatusManage.do?article_type=91');">
+    <td class="m2">&nbsp;</td>
+    <td class="m2">在线投稿</td>
+    <td class="m2">&nbsp;</td>
+  </tr>
+<%
+	}
+	if("TRUE".equals(map.get("42"))){
+%>
+	<tr id="sub_xsjl" style="display:<%=str_display%>;" onClick="gourl('ArticleStatusManage.do?article_type=92');">
+    <td class="m2">&nbsp;</td>
+    <td class="m2">经验分享</td>
+    <td class="m2">&nbsp;</td>
+  </tr>
+<%
+	}
 	if("TRUE".equals(map.get("1"))){
 %>
   <tr onClick="gourl('PatientManage.do');">
@@ -475,7 +509,7 @@ body{
 	}
 	if("TRUE".equals(map.get("20"))){
 %>
-  <tr id="sub_wzgl" style="display:<%=str_display%>;" onClick="gourl('MemTypeManage.do');">
+  <tr id="sub_wzgl" style="display:<%=str_display%>;" onClick="gourl('ArticleStatusManage.do?article_type=90');">
     <td class="m2">&nbsp;</td>
     <td class="m2">学习交流</td>
     <td class="m2">&nbsp;</td>
