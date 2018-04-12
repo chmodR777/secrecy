@@ -1,0 +1,133 @@
+<html>
+<head>
+<link href="/css/css.css" type="text/css" rel="stylesheet">
+<title>城建项目处项目信息管理系统</title>
+<syntc:ScriptsCommon />
+
+<script	language=javascript>
+function funonload(){
+	document.loginFrm.txtUserCode.focus();
+}
+
+function mysubmit(){
+	var	v_user = document.loginFrm.txtUserCode.value;
+	var	v_pwd	=	document.loginFrm.txtUserPwd.value;
+	if(v_user	== null	|| v_user	== ""){
+		alert("请输入用户名！");
+		return;
+	}
+	if(v_pwd ==	null ||	v_pwd	== ""){
+		alert("请输入密码！");
+		return;
+	}
+	document.loginFrm.action="Login.do";
+	document.loginFrm.submit();
+
+}
+
+function checksubmit(){
+	if(event.keyCode ==	13){
+		mysubmit();
+	}	
+}
+
+function myclear(){
+	document.loginFrm.txtUserCode.value	=	"";	
+	document.loginFrm.txtUserPwd.value = "";
+}
+</script>
+
+</head>
+
+
+
+<body	topmargin="50" leftmargin="0"	onkeydown="checksubmit()" onload="funonload()">
+
+<form	name="loginFrm"	action="Login.do"	method="post">
+
+<center>
+<br>
+
+<div align="center"	valign="center">
+
+<!-- 头部 -->
+<table cellpadding="0" cellspacing="0" topmargin="0" leftmargin="0"	border=0 width=730>
+	<tr>
+		<td>
+			<table cellpadding="0" cellspacing="0" topmargin="0" leftmargin="0"	border=0 width=100%>
+				<tr>
+					<td	width=280 align=left><img src="/images/login/head1.gif" border=0></td>
+					<td	bgcolor="#ffffff" background ="/images/login/headbg2.gif">&nbsp;</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+
+<!-- 中左 -->
+	<tr>
+		<td>
+			<table cellpadding="0" cellspacing="0" topmargin="0" leftmargin="0"	border=0 width=100%>
+				<tr>
+					<td	width=280 align=left><img src="/images/login/left.gif"	border=0></td>
+					<td>
+						<table cellpadding="0" cellspacing="0" topmargin="0" leftmargin="0"	border=0 width=100%>
+							<tr>
+								<td	width=115 align=left><img src="/images/login/bar1.gif" border=0></td>
+								<td align=center valign=top>
+
+<!-- 中部 -->
+<table cellpadding="0" cellspacing="0" topmargin="0" leftmargin="0"	border=0 width=70%>
+	<tr>
+		<td colspan=2 height=30>&nbsp;</td>
+	</tr>
+	<tr>
+		<td colspan=2 align=center><font color=white>用户编号或登录密码错误!</font></td>
+	</tr>
+	<tr>
+		<td colspan=2 height=25>&nbsp;</td>
+	</tr>
+	<tr>
+		<td	align="center" nowrap height=30>用户名:&nbsp;&nbsp;&nbsp;</td>
+		<td	align="right" nowrap><INPUT	TYPE="text"	NAME="txtUserCode" size="10" style="width:120" value="root"></td>
+	</tr>
+	<tr>
+		<td	align="center" nowrap height=30>登录密码:</td>
+		<td	align="right" nowrap><INPUT	TYPE="password"	NAME="txtUserPwd"	size="12" style="width:120"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td	align="right" nowrap height=30>
+			<INPUT TYPE="button" VALUE=" 登录 " onclick="mysubmit()">&nbsp;
+			<INPUT TYPE="button" VALUE=" 清除 " onclick="myclear()">
+		</td>
+	</tr>
+</table>
+
+<!-- 中右 -->
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td	width=11 bgcolor="#ffffff" valign=bottom align=right><img src="/images/login/bow.gif"	border=0></td>
+					<td	width=11 background="/images/login/bg.gif"></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+
+<!-- 下部 -->	
+	<tr>
+		<td	width=100% height=11 background="/images/login/bg.gif"></td>
+	<tr>
+		<td	height=20>&nbsp;</td>
+	</tr>
+	<tr>
+		<td align="center">ltz工作组 	版权所有 2007</td>
+	</tr>
+</table>
+
+</div>
+</form>
+</body>
+</html>
+

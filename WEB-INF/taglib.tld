@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!--
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+        "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+<taglib>
+  <tlib-version>1.2</tlib-version>
+  <jsp-version>1.2</jsp-version>
+-->
+<!DOCTYPE taglib 
+          PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.1//EN" 
+          "http://java.sun.com/j2ee/dtds/web-jsptaglibrary_1_1.dtd"> 
+<taglib> 
+  <tlibversion>1.0</tlibversion> 
+  <jspversion>1.1</jspversion> 
+
+  <shortname>CustomTag</shortname>
+  <info>
+    framework of nextsoft
+  </info>
+
+  <!-- common button defined by jinghuizhen@hotmail 2006-6-7 -->
+  <tag>
+	<name>ButtonBase</name>
+	<tagclass>com.syntc.taglib.html.ButtonBaseTag</tagclass>
+	<info>baseButtonTag</info>
+	<attribute>
+		<name>caption</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>onclick</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>width</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>id</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+  </tag>
+  
+  <tag>
+	<name>NewButton</name>
+	<tagclass>com.syntc.taglib.html.NewButtonTag</tagclass>
+	<info>common submitButtonTag</info>
+  </tag>
+
+  <tag>
+	<name>SubmitButton</name>
+	<tagclass>com.syntc.taglib.html.SubmitButtonTag</tagclass>
+	<info>common submitButtonTag</info>
+  </tag>
+
+  <tag>
+	<name>CancelButton</name>
+	<tagclass>com.syntc.taglib.html.CancelButtonTag</tagclass>
+	<info>common submitButtonTag</info>
+  </tag>
+
+  <tag>
+	<name>DeleteButton</name>
+	<tagclass>com.syntc.taglib.html.DeleteButtonTag</tagclass>
+	<info>common submitButtonTag</info>
+  </tag>
+
+  <tag>
+	<name>ModifyButton</name>
+	<tagclass>com.syntc.taglib.html.ModifyButtonTag</tagclass>
+	<info>common submitButtonTag</info>
+  </tag>
+
+  <tag>
+	<name>SaveButton</name>
+	<tagclass>com.syntc.taglib.html.SaveButtonTag</tagclass>
+	<info>common submitButtonTag</info>
+  </tag>
+
+  <tag>
+	<name>QueryButton</name>
+	<tagclass>com.syntc.taglib.html.QueryButtonTag</tagclass>
+	<info>common submitButtonTag</info>
+  </tag>
+
+  <tag>
+	<name>NextButton</name>
+	<tagclass>com.syntc.taglib.html.NextButtonTag</tagclass>
+	<info>common submitButtonTag</info>
+  </tag>
+
+  <tag>
+	<name>PreButton</name>
+	<tagclass>com.syntc.taglib.html.PreButtonTag</tagclass>
+	<info>common submitButtonTag</info>
+  </tag>
+
+  <tag>
+	<name>ReturnButton</name>
+	<tagclass>com.syntc.taglib.html.ReturnButtonTag</tagclass>
+	<info>common submitButtonTag</info>
+  </tag>
+  
+  <tag>
+	<name>ProBar</name>
+	<tagclass>com.syntc.taglib.html.ProBarTag</tagclass>
+	<info>common submitButtonTag</info>
+  </tag>
+
+  <!-- common header defined by jinghuizhen@hotmail 2006-6-8 -->
+  <tag>
+	<name>Header</name>
+	<tagclass>com.syntc.taglib.html.HeaderBaseTag</tagclass>
+	<info>HeaderBaseTag</info>
+	<attribute>
+		<name>header</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+  </tag>
+  <!-- common header defined by jinghuizhen@hotmail 2006-6-8 -->
+  <!-- common title defined by zhangqiang 2007-03-26 -->
+  <tag>
+	<name>Title</name>
+	<tagclass>com.syntc.taglib.html.TitleBaseTag</tagclass>
+	<info>TitleBaseTag</info>
+	<attribute>
+		<name>header</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>onclick</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+  </tag>
+  <!-- common title defined by zhangqiang 2007-03-26 -->
+  <!-- common TitleHeader defined by zhangqiang 2007-03-26 -->
+  <tag>
+	<name>FuncHeader</name>
+	<tagclass>com.syntc.taglib.html.FuncHeaderTag</tagclass>
+	<info>FuncHeaderTag</info>
+	<attribute>
+		<name>header</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>showall</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+  </tag>
+  <!-- common TitleHeader defined by zhangqiang 2007-03-26 -->
+  <!-- common TitleHeader defined by zhangqiang 2007-03-26 -->
+  <tag>
+	<name>TitleHeader</name>
+	<tagclass>com.syntc.taglib.html.TitleHeaderTag</tagclass>
+	<info>TitleHeaderTag</info>
+	<attribute>
+		<name>header</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+  </tag>
+  <!-- common TitleHeader defined by zhangqiang 2007-03-26 -->
+  <!-- common TitleFoot defined by zhangqiang 2007-03-26 -->
+  <tag>
+	<name>TitleFoot</name>
+	<tagclass>com.syntc.taglib.html.TitleFootTag</tagclass>
+	<info>TitleFootTag</info>
+  </tag>
+  <!-- common TitleFoot defined by zhangqiang 2007-03-26 -->
+  <!-- common TableHeader defined by zhangqiang 2007-03-26 -->
+  <tag>
+	<name>TableHeader</name>
+	<tagclass>com.syntc.taglib.html.TableHeaderTag</tagclass>
+	<info>TableHeaderTag</info>
+  </tag>
+  <!-- common TableHeader defined by zhangqiang 2007-03-26 -->
+  <!-- common TableFoot defined by zhangqiang 2007-03-26 -->
+  <tag>
+	<name>TableFoot</name>
+	<tagclass>com.syntc.taglib.html.TableFootTag</tagclass>
+	<info>TableFootTag</info>
+  </tag>
+  <!-- common TableFoot defined by zhangqiang 2007-03-26 -->
+  <!-- common menuheader defined by zhangqiang 2007-03-26 -->
+  <tag>
+	<name>MenuHeader</name>
+	<tagclass>com.syntc.taglib.html.MenuHeaderTag</tagclass>
+	<info>MenuHeaderTag</info>
+  </tag>
+  <!-- common menuheader defined by zhangqiang 2007-03-26 -->
+  <!-- common dateimg defined by zhangqiang 2007-03-26 -->
+  <tag>
+	<name>DateImg</name>
+	<tagclass>com.syntc.taglib.html.DateImgTag</tagclass>
+	<info>DateImgTag</info>
+	<attribute>
+		<name>element</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+	<attribute>
+		<name>value</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+  </tag>
+  <!-- common dateimg defined by zhangqiang 2007-03-26 -->
+  <!-- common dataisnull defined by zhangqiang 2007-03-26 -->
+  <tag>
+	<name>DataIsNull</name>
+	<tagclass>com.syntc.taglib.html.DataIsNullTag</tagclass>
+	<info>DataIsNullTag</info>
+	<attribute>
+		<name>cols</name>
+		<required>true</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+  </tag>
+  <!-- common dataisnull defined by zhangqiang 2007-03-26 -->
+  <!-- common htmltable defined by zhangqiang 2007-03-26 -->
+  <tag>
+	<name>HtmlTable</name>
+	<tagclass>com.syntc.taglib.html.HtmlTableTag</tagclass>
+	<info>HtmlTableTag</info>
+	<attribute>
+		<name>id</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+  </tag>
+  <!-- common dateimg defined by zhangqiang 2007-03-26 -->
+  <!-- common tabletitle defined by zhangqiang 2007-03-26 -->
+  <tag>
+	<name>TableTitle</name>
+	<tagclass>com.syntc.taglib.html.TableTitleTag</tagclass>
+	<info>TableTitleTag</info>
+	<attribute>
+		<name>header</name>
+		<required>false</required>
+		<rtexprvalue>true</rtexprvalue>
+	</attribute>
+  </tag>
+  <!-- common dateimg defined by zhangqiang 2007-03-26 -->
+  <tag>
+	<name>CheckAllBox</name>
+	<tagclass>com.syntc.taglib.html.CheckAllBoxTag</tagclass>
+	<info>Table with a All Check box</info>
+  </tag>
+
+  <!-- common scripts defined by jinghuizhen@hotmail 2006-6-8 -->
+  <tag>
+	<name>ScriptsCommon</name>
+	<tagclass>com.syntc.taglib.html.ScriptsCommonTag</tagclass>
+	<info>javascript and css defiend here</info>
+  </tag>
+  <!-- ResultHeader -->
+  <tag>
+    <name>resultheader</name>
+    <tagclass>com.syntc.taglib.common.ResultHeaderTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      Resultset Information.
+    </info>
+    <attribute>
+      <name>resultName</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  <!-- ResultColumn -->
+  <tag>
+    <name>resultcolumn</name>
+    <tagclass>com.syntc.taglib.common.ResultColumnTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      get current record column value.
+    </info>
+    <attribute>
+      <name>column</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+	<attribute>
+      <name>type</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  <!-- ListFooter -->
+  <tag>
+    <name>listfooter</name>
+    <tagclass>com.syntc.taglib.common.ListFooterTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      get list footer infomation.
+    </info>
+    <attribute>
+      <name>actionname</name>
+      <required>false</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  <!-- Parameters -->
+  <tag>
+    <name>parameters</name>
+    <tagclass>com.syntc.taglib.common.ParametersTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      get request value;
+    </info>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+  <!-- Prameters Equal -->
+  <tag>
+    <name>parametersequal</name>
+    <tagclass>com.syntc.common.taglib.ParametersEqualTag</tagclass>
+    <bodycontent>JSP</bodycontent>
+    <info>
+      whether the name queals the value;
+    </info>
+    <attribute>
+      <name>name</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+    <attribute>
+      <name>value</name>
+      <required>true</required>
+      <rtexprvalue>true</rtexprvalue>
+    </attribute>
+  </tag>
+
+</taglib>
