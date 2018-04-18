@@ -44,7 +44,7 @@ function funClearProid(){
 
 <table cellSpacing=0 cellPadding=0 width="100%" border=0>
 	<tr>
-		<td background="images/frame/top_02.gif" height=70>&nbsp;</td>
+		<td height=70 style="background-image:url(images/frame/top_02.png);background-repeat:no-repeat;height=100%;">&nbsp;</td>
 	</tr>
 </table>
 <table cellSpacing=0 cellPadding=0 width="100%" border=0>

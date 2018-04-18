@@ -18,14 +18,6 @@ a:hover{
 </head>
 <body topmargin=0 leftmargin=0 class=homebg>
 <form method=post action="" name="form1">
-<table border=0 width=100%>
-<tr>
-	<td valign=top>
-<br><br><br><br>
-<img src="<%=path_root%>/images/frame/home_txt.gif" border=0 alt="" >
-	</td>
-</tr>
-</table>
 
 
 <div id='shadow' style='visibility:hidden; position:absolute; top:30; left:30; width:30; height:30; z-index:1; background-color:#BED9EB; filter:alpha(opacity=40);'></div>
